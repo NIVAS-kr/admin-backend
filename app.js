@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 app.use(cors({
-  origin: '*', // Allow requests from all origins (be cautious in production)
+  origin: 'https://medjeex-admin.netlify.app', // Allow requests from all origins (be cautious in production)
   credentials: true, // Allow cookies to be sent with the request
 }));
 
