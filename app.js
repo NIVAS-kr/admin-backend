@@ -11,10 +11,7 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({ path: "./config/.env" });
 }
 
-app.use(cors({
-  origin: 'https://medjeex-admin.netlify.app', // Allow requests from all origins (be cautious in production)
-  credentials: true, // Allow cookies to be sent with the request
-}));
+app.use(cors());
 
 
 app.use(express.json());
