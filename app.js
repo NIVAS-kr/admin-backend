@@ -11,12 +11,10 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({ path: "./config/.env" });
 }
 
-app.use(
-  cors({
-    origin: 'http://localhost:5173',
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: '*', // Allow requests from all origins (be cautious in production)
+  credentials: true, // Allow cookies to be sent with the request
+}));
 
 
 app.use(express.json());
